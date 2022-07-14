@@ -1,37 +1,38 @@
-#include  <stdio.h>
+#include <stdio.h>
 
 /**
-* main - Entry point prints from 1 to 100
-*
-* Return: Always (0) Success
-*/
+ * main - check the code
+ * Return: void
+ */
 int main(void)
 {
-	int i;
+	int i = 1;
 
-	for (i = 1; i <= 100; i++)
+	while (i <= 100)
 	{
-		if (((i % 3) == 0) && ((i % 5) == 0))
+		if (i % 3 == 0 && i % 5 == 0)
 		{
 			printf("FizzBuzz");
 		}
-		else if (((i % 3) == 0) && ((i % 5) != 0))
+		else if (i % 3 == 0)
 		{
 			printf("Fizz");
 		}
-		else if (((i % 5) == 0) && ((i % 3) != 0))
+		else if (i % 5 == 0)
 		{
 			printf("Buzz");
 		}
 		else
 		{
-			printf("%d", i);
+			printf("%i", i);
 		}
-
 		if (i != 100)
-			printf(" ");
+		{
+			putchar(' ');
+		}
+		i++;
 	}
+	putchar('\n');
 
-	printf("\n");
 	return (0);
 }

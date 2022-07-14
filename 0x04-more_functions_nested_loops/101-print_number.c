@@ -1,20 +1,24 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+int _putchar(char c);
 
 /**
-* print_number - print an integer
-* @n: the number will be checked
-*
-* Return: Always nothing
-*/
+ * print_number - prints numbers
+ * @n: number to be printed
+ * Return: void
+ */
 void print_number(int n)
 {
-	unsigned int n1;
+	unsigned int n1 = 0;
 
 	if (n < 0)
 	{
 		n1 = -n;
 		_putchar('-');
-	} else
+	}
+	else
 	{
 		n1 = n;
 	}
@@ -23,6 +27,5 @@ void print_number(int n)
 	{
 		print_number(n1 / 10);
 	}
-
 	_putchar((n1 % 10) + '0');
 }
