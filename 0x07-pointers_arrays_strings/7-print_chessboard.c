@@ -1,19 +1,19 @@
-#include "stdio.h"
+#include "holberton.h"
 
 /**
- * print_chessboard - prints chessboard
- * @a: matrix
+ * print_chessboard - prototype function
+ * @a: - Variable char pointer
+ * Return: Void
  */
+
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
+	int b, c;
 
-	for (i = 0; i < 8; i++)
+	for (b = 0; b < 8; b++)
 	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar(*(*(i + a) + j));
-		}
-	_putchar('\n');
+		for (c = 0; c < 8; c++)
+			_putchar(a[b][c]);
+		_putchar(10);
 	}
 }
